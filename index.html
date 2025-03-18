@@ -42,10 +42,9 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/nobg.png" alt="">
-        <!-- Uncomment the line below if you also wish to use an text logo -->
-        <!-- <h1 class="sitename">TheEvent</h1>  -->
+        <img src="assets/img/nobg.png" alt="" style="background-color: rgba(255, 255, 255, 0.7); border-radius: 8px;">
       </a>
+    
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -79,8 +78,6 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="cta-btn d-none d-sm-block" href="#buy-tickets">Register</a>
-
     </div>
   </header>
 
@@ -89,15 +86,54 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/impact-1.JPG" alt="" data-aos="fade-in" class="">
 
       <div class="container d-flex flex-column align-items-center text-center mt-auto">
-        <h2 data-aos="fade-up" data-aos-delay="100" class="">GLOBAL ACTION<br><span>WEEK</span> FOR EDUCATION</h2>
-        <p data-aos="fade-up" data-aos-delay="200">GAWE 2025</p>
-        <div data-aos="fade-up" data-aos-delay="300" class="">
-          <a href="#" class="glightbox pulsating-play-btn mt-3"></a>
+        <h2 data-aos="fade-up" data-aos-delay="100"><br><span>GAWE 2025</span> </h2>
+        <p data-aos="fade-up" data-aos-delay="200"> GLOBAL ACTION WEEK FOR EDUCATION </p>
+    
+        <!-- Countdown Timer -->
+        <div id="countdown" data-aos="fade-up" data-aos-delay="300" class="mt-3">
+          <h3>Countdown to GAWE 2025</h3>
+          <div class="timer">
+              <span id="days"></span> <span class="label">Days</span>
+              <span id="hours"></span> <span class="label">Hours</span>
+              <span id="minutes"></span> <span class="label">Minutes</span>
+              <span id="seconds"></span> <span class="label">Seconds</span>
+          </div>
+        </div>
+      
+    
+        <div data-aos="fade-up" data-aos-delay="300">
+            <a href="#" class="glightbox pulsating-play-btn mt-3"></a>
         </div>
       </div>
+    
+      <script>
+        function updateCountdown() {
+            const eventDate = new Date("May 5, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+    
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
+            } else {
+                document.getElementById("countdown").innerHTML = "<h3>GAWE 2025 is Happening Now!</h3>";
+            }
+        }
+    
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call to avoid 1-second delay
+      </script>
+    
 
       <div class="about-info mt-auto position-relative">
 
@@ -105,10 +141,11 @@
           <div class="row">
             <div class="col-lg-6">
               <h2>GAWE 2025</h2>
-              <p style="text-align: justify;">GAWE brings together education advocates, policymakers, and stakeholders to advance quality education.
-                 In 2025, it highlights “Education in Emergencies,” emphasizing the urgent need to ensure learning continuity
-                  for children and youth affected by conflicts, disasters, and displacement.
-                </p>
+              <p style="text-align: justify;">
+                GAWE brings together education advocates, policymakers, and stakeholders to advance quality education.  
+                In 2025, under the theme <strong>“Education for Skills Development,”</strong> the focus is on equipping youth with essential skills  
+                for personal growth, innovation, and sustainable development.
+            </p>
             </div>
             <div class="col-lg-3">
               <h3>Where</h3>
@@ -129,7 +166,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Event Speakers<br></h2>
+        <h2>Speakers<br></h2>
 
       </div><!-- End Section Title -->
 
@@ -220,8 +257,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Event Schedule<br></h2>
-        <p>Explore the sessions, discussions, and activities planned for GAWE 2025 in Katavi.</p>
+        <h2>Schedule<br></h2>
+        <p>Explore activities planned for GAWE 2025 in Katavi.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -246,7 +283,7 @@
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <h3 class="sub-heading">Join us for the Global Action Week for Education (GAWE) 2025 in Katavi, Tanzania, as we come together to advocate for inclusive and quality education for all.</h3>
+          <h3 class="sub-heading">Join us for the Global Action Week for Education (GAWE) 2025 in Katavi, Tanzania, as we come together to advocate for skills-based education for all.</h3>
 
           <!-- Schedule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
@@ -555,10 +592,10 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Event Venue<br></h2>
-        <p>GAWE 2025 will take place in Katavi, Tanzania, providing a unique opportunity to engage in discussions on quality education.</p>
+        <h2>Venue<br></h2>
+        <p>GAWE 2025 will be held in Katavi, Tanzania, offering a valuable platform for meaningful discussions and active engagement in advocating for quality and skills-based education.</p>
       </div><!-- End Section Title -->
-
+      
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row g-0">
@@ -711,7 +748,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Explore moments from GAWE 2025 in Katavi, a visual journey of impactful events, engagements, and celebrations.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -780,10 +817,8 @@
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/camfed.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="assets/img/clients/cssc.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+          
+          
 
           <div class="col-xl-3 col-md-4 client-logo">
             <img src="assets/img/clients/plan.png" class="img-fluid" alt="">
@@ -809,6 +844,30 @@
             <img src="assets/img/clients/her.png" class="img-fluid" alt="">
           </div><!-- End Client Item -->
 
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/pestalozzi.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/flaviana.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/uwezo.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/room.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/cagbv.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="assets/img/clients/educate.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
         </div>
 
       </div>
@@ -821,7 +880,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <p>Find answers to common questions about GAWE 2025, including its theme, objectives, and how you can participate.</p>
+        <p>Find answers to common questions about GAWE 2025, including its theme, objectives, and how you can contribute.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -835,7 +894,7 @@
               <div class="faq-item faq-active">
                 <h3>What is GAWE?</h3>
                 <div class="faq-content">
-                  <p>Global Action Week for Education (GAWE) is an international campaign that advocates for the right to quality education for all. It brings together stakeholders to raise awareness and push for policy changes to improve education systems worldwide.</p>
+                  <p style="text-align: justify;">The Global Action Week for Education (GAWE) is a significant annual advocacy campaign dedicated to championing the right to quality education for all. GAWE is coordinated by the Global Campaign for Education (GCE), which sets the annual theme and provides campaign resources to ensure cohesive advocacy efforts worldwide. The Global Action Week for Education is embraced by National coalitions like the Tanzania Education Network/ Mtandao wa Elimu Tanzania (TEN/MET), Zambia National Education Coalition (ZANEC) among many. These efforts ensure that African priorities are reflected in the broader GAWE agenda. Countries commemorate GAWE through localized campaigns led by education coalitions and civil society organizations. </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -843,7 +902,7 @@
               <div class="faq-item">
                 <h3>What is the theme for GAWE 2025?</h3>
                 <div class="faq-content">
-                  <p>The theme for GAWE 2025 is <strong>Education in Emergencies</strong>. This theme highlights the urgent need to ensure access to quality education for children and youth affected by crises, including conflicts, natural disasters, and other emergencies. GAWE 2025 aims to raise awareness, advocate for policies, and mobilize resources to support education in vulnerable contexts.</p>
+                  <p style="text-align: justify;">The theme for GAWE 2025 is <strong>Education for Skills Development</strong>. This theme highlights the importance of equipping youth with essential skills for personal growth, creativity, and sustainable development. GAWE 2025 aims to raise awareness, advocate for skill-based education policies, and mobilize resources to enhance learning opportunities for all.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -851,7 +910,7 @@
               <div class="faq-item">
                 <h3>Who organizes GAWE 2025?</h3>
                 <div class="faq-content">
-                  <p>GAWE 2025 is organized by TEN/MET in collaboration with Global Campaign for Education (GCE) and other education advocacy partners. The event involves educators, policymakers, civil society organizations, and learners to drive meaningful discussions on education rights.</p>
+                  <p style="text-align: justify;">GAWE 2025 is coordinated globally by the Global Campaign for Education (GCE) and locally organized in Tanzania by the Tanzania Education Network / Mtandao wa Elimu Tanzania (TEN/MET) in collaboration with its member organizations.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -861,10 +920,10 @@
                 <div class="faq-content">
                   <p>The main goals of GAWE 2025 include:</p>
                   <ul>
-                    <li>Advocating for inclusive and equitable quality education.</li>
-                    <li>Raising awareness about current challenges in the education sector.</li>
-                    <li>Engaging governments and stakeholders to implement education policies.</li>
-                    <li>Empowering communities to demand better education systems.</li>
+                    <li>Advocating for inclusive and equitable education that promotes skills development.</li>
+                    <li>Raising awareness about the importance of equipping youth with essential skills for innovation and sustainable growth.</li>
+                    <li>Engaging governments and stakeholders to strengthen policies that support skill-based education.</li>
+                    <li>Empowering communities to champion education systems that foster creativity, critical thinking, and lifelong learning.</li>
                   </ul>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -873,7 +932,7 @@
               <div class="faq-item">
                 <h3>Where can I find resources and updates after GAWE 2025?</h3>
                 <div class="faq-content">
-                  <p>Resources, reports, and updates from GAWE 2025 will be available on our website <a href="https://tenmet.or.tz" target="_blank">tenmet.or.tz</a> and shared through our official social media channels. Participants and stakeholders will also receive newsletters featuring key highlights and follow-up actions.</p>
+                  <p>Resources, reports, and updates from GAWE 2025 will be available on our website <a href="https://tenmet.or.tz" target="_blank">tenmet.or.tz</a> and shared through our official social media channels. Participants and stakeholders will also receive email newsletters featuring key highlights and follow-up actions.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
